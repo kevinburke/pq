@@ -46,7 +46,7 @@ func (err *pgError) Get(k byte) (v string) {
 }
 
 // Get the human-readable error message
-func (err *pgError) ExampleGet() {
+func (err *pgError) Example_Get() {
 	fmt.Println(err.Get('M'))
 	// Output: duplicate key value violates unique constraint
 }
