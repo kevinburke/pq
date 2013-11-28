@@ -45,6 +45,12 @@ func (err *pgError) Get(k byte) (v string) {
 	return
 }
 
+// Get the human-readable error message
+func (err *pgError) ExampleGet() {
+	fmt.Println(err.Get('M'))
+	// Output: duplicate key value violates unique constraint
+}
+
 func (err *pgError) Fatal() bool {
 	return err.Get('S') == Efatal
 }
